@@ -50,6 +50,7 @@ module Spree
               @product_group = Spree::ProductGroup.new.from_route([params[:order_by_price] + '_by_master_price'])
             elsif params[:product_group_name]
               @cached_product_group = Spree::ProductGroup.find_by_permalink(params[:product_group_name])
+              @cached_product_group = @cached_product_group.from_route(params[:product_group_query].split('/')) if params[:product_group_query]
               @product_group = Spree::ProductGroup.new
             elsif params[:product_group_query]
               @product_group = Spree::ProductGroup.new.from_route(params[:product_group_query].split('/'))
