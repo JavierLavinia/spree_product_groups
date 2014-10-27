@@ -34,4 +34,23 @@
     <% end %>
   </tbody>
 </table>
-<%= paginate @product_groups %>
+
+<%= paginate @product_groups -%>
+
+<% content_for :sidebar do %>
+  <div class="box" data-hook="admin_product_groups_index_search">
+    <h3><%= t(:search) %></h3>
+
+    <%= search_form_for [:admin, @search] do |f| %>
+      <p>
+        <%= label_tag nil, t(:name) -%><br/>
+        <%= f.text_field :name_cont, :size => 25  -%>
+      </p>
+
+      <div data-hook="admin_product_groups_index_search_buttons">
+        <p><%= button t(:search) %></p>
+      </div>
+    <%- end -%>
+  </div>
+<%- end -%>
+
