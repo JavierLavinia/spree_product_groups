@@ -19,6 +19,7 @@ module SpreeProductGroups
 
     initializer "spree.product_groups.environment", :after => 'spree.environment' do |app|
       Spree::Config.searcher_class = Spree::Core::Search::ProductGroupBase
+      app.config.spree.promotions.rules += [Spree::Promotion::Rules::NoProduct]
     end
 
   end

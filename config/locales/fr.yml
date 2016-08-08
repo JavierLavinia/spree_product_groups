@@ -1,5 +1,5 @@
 ---
-en:
+fr:
   spree/product_group:
     name: Name
     product_count: "Product count"
@@ -23,5 +23,5 @@ en:
         name: Sort by popularity(most popular first)
   promotion_rule_types:
     no_product:
-      name: "Without product"
-      description: "The order not include this products"
+      name: "Non product"
+      description: "El pedido no incluye los siguientes productos"
