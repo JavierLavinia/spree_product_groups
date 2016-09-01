@@ -24,4 +24,4 @@ es:
   promotion_rule_types:
     no_product:
       name: "Sin producto"
-      description: "El pedido no incluye los siguientes productos"
+      description: "La promoción no aplica en los siguientes productos"
